@@ -38,6 +38,9 @@ Every document here is a **Markdown** (`.md`) file — plain text with a few sim
 
 If `.md` files are new to you — including how to open one and how to format text — start with **[Working with Markdown (.md) Files](working-with-markdown-files.md)**. It covers the essential formatting and the (mostly free) tools for both Mac and Windows.
 
+> [!TIP]
+> Prefer to read or print? A PDF copy of every document is in the [`pdf/`](pdf/) folder.
+
 ---
 
 ## What Is Included
