@@ -149,6 +149,21 @@ Four principles that should not be skipped regardless of how lightly you adopt t
 
 ---
 
+## Contributing and Suggesting Changes
+
+Suggestions and improvements are welcome. This is a **curated** framework — one maintainer reviews every proposed change, so the documents stay consistent and plain-language. Nothing changes unless it is reviewed and accepted.
+
+You do **not** need to be technical to take part:
+
+- **Simplest:** open an **Issue** on GitHub and describe your idea in your own words.
+- **To propose exact wording:** open a **Pull Request** (a suggested edit to your own copy that the maintainer can accept).
+
+Every suggestion is reviewed personally and gets one of three outcomes: **accepted as proposed**, **accepted in principle and then reworded to fit the framework**, or **declined with a brief reason**.
+
+Full step-by-step instructions — including how forks and Pull Requests work for non-technical contributors — are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+
+---
+
 ## Key Terms
 
 Plain-language definitions of the terms used across this bundle.
