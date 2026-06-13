@@ -161,6 +161,16 @@ Plain-language definitions of the terms used across this bundle.
 
 ---
 
+## Licence
+
+This work is licensed under a **[Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](LICENSE)**.
+
+You are free to share and adapt this material for any purpose, including commercially, provided you give appropriate credit. A suggested attribution:
+
+> Based on *AI-Assisted Work: Community Edition* by Jason Masters (JPMasters), licensed under CC BY 4.0. Source: https://github.com/JPMasters-AUS/ai-without-losing-control
+
+---
+
 ## Version History
 
 | Version | Date | Author | Summary |
