@@ -1,0 +1,337 @@
+<!DOCTYPE html>  
+<html lang="AU">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>working-with-markdown-files</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style id="mkstylesheet">
+body{-webkit-font-smoothing:antialiased;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;margin:30px 0 0;padding:0;background:#fff;color:#303030;font-size:14px;line-height:1.45}#wrapper{padding:20px}li{font-size:110%}li li{font-size:100%}li p{font-size:100%;margin:.5em 0}h1{color:#000}h2{color:#111}h3{color:#111}h4{color:#111}h5{color:#111}h6{color:#111;font-style:italic}p,td,div{color:#111;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;word-wrap:break-word}a{color:#0d6ea1;text-decoration:none;-webkit-transition:color .2s ease-in-out;-moz-transition:color .2s ease-in-out;-o-transition:color .2s ease-in-out;-ms-transition:color .2s ease-in-out;transition:color .2s ease-in-out}a:hover{color:#3593d9}h1,h2,h3,h4,h5{margin:2.75rem 0 1rem;font-weight:600;line-height:1.15}h1{margin-top:0;font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}ul,ol,pre,table,blockquote{margin-top:.625em;margin-bottom:.625em}hr{border:1px solid;margin:-1px 0}ul ul,ol ol,ul ol,ol ul{margin-top:0;margin-bottom:0}b,strong,em,small,code{line-height:1}.footnote{color:#0d6ea1;font-size:.8em;vertical-align:super}abbr,acronym{border-bottom:1px dotted #aaa}#wrapper img{max-width:100%;height:auto}dd{font-size:1em;margin-bottom:1em}li>p:first-of-type{margin:0}li p+p{margin-top:16px}ul,ol{padding-left:2.5rem}#wrapper ol{list-style-position:outside}ul ul,ul ol{margin-bottom:.4em}caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr{border-spacing:0}table{border:1px solid rgba(0,0,0,0.25);border-collapse:collapse;display:table;empty-cells:hide;margin:-1px 0 1.3125em;padding:0;table-layout:fixed}caption{display:table-caption;font-weight:700}col{display:table-column}colgroup{display:table-column-group}tbody{display:table-row-group}tfoot{display:table-footer-group}thead{display:table-header-group}td,th{display:table-cell}tr{display:table-row}table th,table td{font-size:1.1em;line-height:1.3;padding:.5em 1em 0}table thead{background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.15);border-bottom:1px solid rgba(0,0,0,0.2)}table tbody{background:rgba(0,0,0,0.05)}table tfoot{background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.15);border-top:1px solid rgba(0,0,0,0.2)}figure{display:inline-block;overflow:hidden;position:relative;margin:1em 0 2em}figcaption{font-style:italic;text-align:center;background:white;color:#666}.poetry pre{display:block;font-family:Georgia,Garamond,serif !important;font-size:110% !important;font-style:italic;line-height:1.6em;margin-left:1em}.poetry pre code{font-family:Georgia,Garamond,serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}blockquote p{font-size:110%;font-style:italic;line-height:1.6em}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;position:relative;vertical-align:super}sub{vertical-align:sub;top:-1px}p{font-size:1.1429em;line-height:1.3125em;margin:1.3125em 0}dt,th{font-weight:700}table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd){background:rgba(255,255,255,0.06)}table tr:nth-child(even),table td:nth-child(even){background:rgba(200,200,200,0.25)}@media print{img,table,figure{page-break-inside:avoid}#wrapper{background:#fff;color:#303030;padding:10px;position:relative;text-indent:0}}@media screen{.inverted{background:#252a2a}.inverted #wrapper{background:#252a2a;color:#eee}.inverted hr{border-color:#333f40 !important}.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dt,.inverted dd{color:#eee}.inverted pre{background:#ccc;color:#111}.inverted table{background:none}.inverted table tr:nth-child(odd),.inverted table td:nth-child(odd){background:none}.inverted a{color:#acd1d5}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}}.mkstyle--swiss #wrapper aside.blurb:before{margin-top:.7em}
+#mkreplaced-toc{list-style-position:inside;padding:0;margin:0 0 0 1rem;list-style-type:none}#mkreplaced-toc li::before{content:''}#mkreplaced-toc li{font-size:1rem;line-height:1.25;font-weight:normal}#mkreplaced-toc li ul{font-size:1.3rem;font-weight:300;padding:.5rem 0;margin:0 0 0 1rem}#mkreplaced-toc li.missing{list-style-type:none !important}#mkreplaced-toc.max-1 ul,#mkreplaced-toc.max1 ul{display:none}#mkreplaced-toc.max-2 ul ul,#mkreplaced-toc.max2 ul ul{display:none}#mkreplaced-toc.max-3 ul ul ul,#mkreplaced-toc.max3 ul ul ul{display:none}#mkreplaced-toc.max-4 ul ul ul ul,#mkreplaced-toc.max4 ul ul ul ul{display:none}#mkreplaced-toc.max-5 ul ul ul ul ul,#mkreplaced-toc.max5 ul ul ul ul ul{display:none}.mk-rtl{direction:rtl;text-align:right}body.mkkatex-number-equations{counter-reset:eqnum}body.mkkatex-number-equations .katex-display{position:relative}body.mkkatex-number-equations .katex-display::after{counter-increment:eqnum;content:"(" counter(eqnum) ")";position:absolute;left:0;top:25%}body.mkkatex-number-equations.mkkatex-number-equations-right .katex-display::after{right:0;left:auto}.mkprinting,.mkprinting #wrapper{height:auto;margin-bottom:0;padding-bottom:0}.hideProgress #generated-toc,.hideProgress #firstdiff,.hideProgress #toc-title,.hideProgress #mkdocumentprogress,.hideProgress #mkincludechart,.hideProgress #mkprogressbar1,.hideProgress #mkprogressbar2,.hideProgress b.bookmark,.hideProgress .mkscrollmeter,.hideProgress #alllinks,.hideProgress #criticnav,.hideProgress .popup,.hideProgress #progressindicator,.hideProgress #mkautoscroll,.mkprinting #generated-toc,.mkprinting #firstdiff,.mkprinting #toc-title,.mkprinting #mkdocumentprogress,.mkprinting #mkincludechart,.mkprinting #mkprogressbar1,.mkprinting #mkprogressbar2,.mkprinting b.bookmark,.mkprinting .mkscrollmeter,.mkprinting #alllinks,.mkprinting #criticnav,.mkprinting .popup,.mkprinting #progressindicator,.mkprinting #mkautoscroll{display:none !important}.hideProgress .mkstyledtag,.mkprinting .mkstyledtag{display:none}.mkcolor-grammar-error,.mkcolor-spell-error{background:none;border-bottom:none}.mkprinting.mkshowcomments .mkstyledtag{display:inline;background:#ccc;padding:3px 9px;border-radius:20px;font-size:1}@media print{body{background:white;line-height:1.4}html,body,#wrapper{-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;-webkit-perspective:none !important;-webkit-text-size-adjust:none;border:0;box-sizing:border-box;float:none;margin:0;max-width:100%;padding:0;margin-top:0;width:auto}.critic #wrapper mark.crit{background-color:#fffd38 !important;text-decoration:none;color:#000}h1,h2,h3,h4,h5,h6{page-break-after:avoid}p,h2,h3{orphans:3;widows:3}section{page-break-before:avoid}pre>code{white-space:pre;word-break:break-word}#generated-toc,#firstdiff,#toc-title,#mkdocumentprogress,#mkincludechart,#mkprogressbar1,#mkprogressbar2,.mkscrollmeter,#alllinks,.popup{display:none !important}.suppressprintlinks a{border-bottom:none !important;color:inherit !important;cursor:default !important;text-decoration:none !important}.hrefafterlinktext #wrapper a:link:after,.hrefafterlinktext #wrapper a:visited:after{content:" (" attr(href) ") ";font-size:90%;opacity:.9}.nocodebreak pre{page-break-inside:avoid}img,table,figure{page-break-inside:avoid}.breakfootnotes .footnotes{page-break-before:always}.breakfootnotes .footnotes hr{display:none}#mktoctitle{display:block}#print-title{border-bottom:solid 1px #666;display:block}#wrapper pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{display:block}.task-list{padding-left:3.3rem}.mkstyle--ink .task-list,.mkstyle--swiss .task-list{padding-left:3.3rem !important}.mkstyle--upstandingcitizen .task-list,.mkstyle--github .task-list{padding-left:3.6rem !important}.mkstyle--manuscript .task-list{padding-left:2.4rem !important}.mkstyle--amblin .task-list{padding-left:2.1rem !important}.mkstyle--grump .task-list{padding-left:1rem !important}.mkstyle--grump .task-list .task-list-item-checkbox{left:0 !important}.task-list .task-list-item{list-style-type:none !important;left:auto}.task-list .task-list-item .task-list-item-checkbox{-webkit-appearance:none;position:relative;left:auto}.task-list .task-list-item .task-list-item-checkbox:before{border:solid 1px #aaa;border-radius:2px;color:white;content:' ';display:block;font-weight:bold;height:1em;left:-1rem;line-height:1;position:absolute;text-align:center;top:-.75em;width:1em}.task-list .gh-complete.task-list-item .task-list-item-checkbox:before{background:#838387;content:'\2713'}}
+
+</style>
+  <style id="mktocwrapper">body{-webkit-font-smoothing:antialiased;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;margin:30px 0 0;padding:0;background:#fff;color:#303030;font-size:14px;line-height:1.45}#wrapper{padding:20px}li{font-size:110%}li li{font-size:100%}li p{font-size:100%;margin:.5em 0}h1{color:#000}h2{color:#111}h3{color:#111}h4{color:#111}h5{color:#111}h6{color:#111;font-style:italic}p,td,div{color:#111;font-family:"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;word-wrap:break-word}a{color:#0d6ea1;text-decoration:none;-webkit-transition:color .2s ease-in-out;-moz-transition:color .2s ease-in-out;-o-transition:color .2s ease-in-out;-ms-transition:color .2s ease-in-out;transition:color .2s ease-in-out}a:hover{color:#3593d9}h1,h2,h3,h4,h5{margin:2.75rem 0 1rem;font-weight:600;line-height:1.15}h1{margin-top:0;font-size:3.052em}h2{font-size:2.441em}h3{font-size:1.953em}h4{font-size:1.563em}h5{font-size:1.25em}ul,ol,pre,table,blockquote{margin-top:.625em;margin-bottom:.625em}hr{border:1px solid;margin:-1px 0}ul ul,ol ol,ul ol,ol ul{margin-top:0;margin-bottom:0}b,strong,em,small,code{line-height:1}.footnote{color:#0d6ea1;font-size:.8em;vertical-align:super}abbr,acronym{border-bottom:1px dotted #aaa}#wrapper img{max-width:100%;height:auto}dd{font-size:1em;margin-bottom:1em}li>p:first-of-type{margin:0}li p+p{margin-top:16px}ul,ol{padding-left:2.5rem}#wrapper ol{list-style-position:outside}ul ul,ul ol{margin-bottom:.4em}caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr{border-spacing:0}table{border:1px solid rgba(0,0,0,0.25);border-collapse:collapse;display:table;empty-cells:hide;margin:-1px 0 1.3125em;padding:0;table-layout:fixed}caption{display:table-caption;font-weight:700}col{display:table-column}colgroup{display:table-column-group}tbody{display:table-row-group}tfoot{display:table-footer-group}thead{display:table-header-group}td,th{display:table-cell}tr{display:table-row}table th,table td{font-size:1.1em;line-height:1.3;padding:.5em 1em 0}table thead{background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.15);border-bottom:1px solid rgba(0,0,0,0.2)}table tbody{background:rgba(0,0,0,0.05)}table tfoot{background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.15);border-top:1px solid rgba(0,0,0,0.2)}figure{display:inline-block;overflow:hidden;position:relative;margin:1em 0 2em}figcaption{font-style:italic;text-align:center;background:white;color:#666}.poetry pre{display:block;font-family:Georgia,Garamond,serif !important;font-size:110% !important;font-style:italic;line-height:1.6em;margin-left:1em}.poetry pre code{font-family:Georgia,Garamond,serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}blockquote p{font-size:110%;font-style:italic;line-height:1.6em}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;position:relative;vertical-align:super}sub{vertical-align:sub;top:-1px}p{font-size:1.1429em;line-height:1.3125em;margin:1.3125em 0}dt,th{font-weight:700}table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd){background:rgba(255,255,255,0.06)}table tr:nth-child(even),table td:nth-child(even){background:rgba(200,200,200,0.25)}@media print{img,table,figure{page-break-inside:avoid}#wrapper{background:#fff;color:#303030;padding:10px;position:relative;text-indent:0}}@media screen{.inverted{background:#252a2a}.inverted #wrapper{background:#252a2a;color:#eee}.inverted hr{border-color:#333f40 !important}.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dt,.inverted dd{color:#eee}.inverted pre{background:#ccc;color:#111}.inverted table{background:none}.inverted table tr:nth-child(odd),.inverted table td:nth-child(odd){background:none}.inverted a{color:#acd1d5}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}}.mkstyle--swiss #wrapper aside.blurb:before{margin-top:.7em}
+#mkreplaced-toc{list-style-position:inside;padding:0;margin:0 0 0 1rem;list-style-type:none}#mkreplaced-toc li::before{content:''}#mkreplaced-toc li{font-size:1rem;line-height:1.25;font-weight:normal}#mkreplaced-toc li ul{font-size:1.3rem;font-weight:300;padding:.5rem 0;margin:0 0 0 1rem}#mkreplaced-toc li.missing{list-style-type:none !important}#mkreplaced-toc.max-1 ul,#mkreplaced-toc.max1 ul{display:none}#mkreplaced-toc.max-2 ul ul,#mkreplaced-toc.max2 ul ul{display:none}#mkreplaced-toc.max-3 ul ul ul,#mkreplaced-toc.max3 ul ul ul{display:none}#mkreplaced-toc.max-4 ul ul ul ul,#mkreplaced-toc.max4 ul ul ul ul{display:none}#mkreplaced-toc.max-5 ul ul ul ul ul,#mkreplaced-toc.max5 ul ul ul ul ul{display:none}.mk-rtl{direction:rtl;text-align:right}body.mkkatex-number-equations{counter-reset:eqnum}body.mkkatex-number-equations .katex-display{position:relative}body.mkkatex-number-equations .katex-display::after{counter-increment:eqnum;content:"(" counter(eqnum) ")";position:absolute;left:0;top:25%}body.mkkatex-number-equations.mkkatex-number-equations-right .katex-display::after{right:0;left:auto}.mkprinting,.mkprinting #wrapper{height:auto;margin-bottom:0;padding-bottom:0}.hideProgress #generated-toc,.hideProgress #firstdiff,.hideProgress #toc-title,.hideProgress #mkdocumentprogress,.hideProgress #mkincludechart,.hideProgress #mkprogressbar1,.hideProgress #mkprogressbar2,.hideProgress b.bookmark,.hideProgress .mkscrollmeter,.hideProgress #alllinks,.hideProgress #criticnav,.hideProgress .popup,.hideProgress #progressindicator,.hideProgress #mkautoscroll,.mkprinting #generated-toc,.mkprinting #firstdiff,.mkprinting #toc-title,.mkprinting #mkdocumentprogress,.mkprinting #mkincludechart,.mkprinting #mkprogressbar1,.mkprinting #mkprogressbar2,.mkprinting b.bookmark,.mkprinting .mkscrollmeter,.mkprinting #alllinks,.mkprinting #criticnav,.mkprinting .popup,.mkprinting #progressindicator,.mkprinting #mkautoscroll{display:none !important}.hideProgress .mkstyledtag,.mkprinting .mkstyledtag{display:none}.mkcolor-grammar-error,.mkcolor-spell-error{background:none;border-bottom:none}.mkprinting.mkshowcomments .mkstyledtag{display:inline;background:#ccc;padding:3px 9px;border-radius:20px;font-size:1}@media print{body{background:white;line-height:1.4}html,body,#wrapper{-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;-webkit-perspective:none !important;-webkit-text-size-adjust:none;border:0;box-sizing:border-box;float:none;margin:0;max-width:100%;padding:0;margin-top:0;width:auto}.critic #wrapper mark.crit{background-color:#fffd38 !important;text-decoration:none;color:#000}h1,h2,h3,h4,h5,h6{page-break-after:avoid}p,h2,h3{orphans:3;widows:3}section{page-break-before:avoid}pre>code{white-space:pre;word-break:break-word}#generated-toc,#firstdiff,#toc-title,#mkdocumentprogress,#mkincludechart,#mkprogressbar1,#mkprogressbar2,.mkscrollmeter,#alllinks,.popup{display:none !important}.suppressprintlinks a{border-bottom:none !important;color:inherit !important;cursor:default !important;text-decoration:none !important}.hrefafterlinktext #wrapper a:link:after,.hrefafterlinktext #wrapper a:visited:after{content:" (" attr(href) ") ";font-size:90%;opacity:.9}.nocodebreak pre{page-break-inside:avoid}img,table,figure{page-break-inside:avoid}.breakfootnotes .footnotes{page-break-before:always}.breakfootnotes .footnotes hr{display:none}#mktoctitle{display:block}#print-title{border-bottom:solid 1px #666;display:block}#wrapper pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{display:block}.task-list{padding-left:3.3rem}.mkstyle--ink .task-list,.mkstyle--swiss .task-list{padding-left:3.3rem !important}.mkstyle--upstandingcitizen .task-list,.mkstyle--github .task-list{padding-left:3.6rem !important}.mkstyle--manuscript .task-list{padding-left:2.4rem !important}.mkstyle--amblin .task-list{padding-left:2.1rem !important}.mkstyle--grump .task-list{padding-left:1rem !important}.mkstyle--grump .task-list .task-list-item-checkbox{left:0 !important}.task-list .task-list-item{list-style-type:none !important;left:auto}.task-list .task-list-item .task-list-item-checkbox{-webkit-appearance:none;position:relative;left:auto}.task-list .task-list-item .task-list-item-checkbox:before{border:solid 1px #aaa;border-radius:2px;color:white;content:' ';display:block;font-weight:bold;height:1em;left:-1rem;line-height:1;position:absolute;text-align:center;top:-.75em;width:1em}.task-list .gh-complete.task-list-item .task-list-item-checkbox:before{background:#838387;content:'\2713'}}
+#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc,#wrapper #generated-toc-clone ul,#wrapper #mkreplaced-toc ul{list-style-position:inside}#wrapper #generated-toc-clone li.missing,#wrapper #mkreplaced-toc li.missing{list-style-type: none!important}#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{list-style-type: upper-roman}#wrapper #generated-toc-clone>li>ul,#wrapper #mkreplaced-toc>li>ul {list-style-type: decimal}#wrapper #generated-toc-clone>ul>li>ul>li>ul,#wrapper #mkreplaced-toc>li>ul>li>ul{list-style-type: decimal-leading-zero}#wrapper #generated-toc-clone>ul>li>ul>li>ul>li>ul,#wrapper #mkreplaced-toc>li>ul>li>ul>li>ul{list-style-type: lower-greek}#wrapper #generated-toc-clone>ul>li>ul>li>ul>li>ul>li>ul,#wrapper #mkreplaced-toc>li>ul>li>ul>li>ul>li>ul{list-style-type: disc}#wrapper #generated-toc-clone>ul>li>ul>li>ul>li>ul>li>ul>li>ul,#wrapper #mkreplaced-toc>li>ul>li>ul>li>ul>li>ul>li>ul{list-style-type: square}#wrapper #generated-toc-clone,#wrapper #mkreplaced-toc{}</style>
+
+<style id="mkprintstyles">@media print{#wrapper #generated-toc-clone,#generated-toc{display:none!important}
+html,body,#wrapper{font-size:10pt!important}
+}
+</style>
+
+
+  </head>
+<body class="normal">
+  <div id="wrapper">
+<h1 id="workingwithmarkdown.mdfiles">Working with Markdown (.md) Files</h1>
+
+<p>Every document in this bundle is a <strong>Markdown</strong> file — a file ending in <code>.md</code>. If you have not used Markdown before, this guide explains what it is, why we use it, how to format text in it, and what (mostly free) tools open and edit it.</p>
+
+<hr />
+
+<h2 id="whatmarkdownis">What Markdown Is</h2>
+
+<p>Markdown is <strong>plain text with a few simple formatting marks</strong>. You write <code>**bold**</code> and it displays as <strong>bold</strong>. You start a line with <code>#</code> and it becomes a heading. That is essentially all there is to it.</p>
+
+<p>A <code>.md</code> file is just a text file. You can open one in any text editor and read it without anything special — the formatting marks are designed to be readable even before they are &#8220;rendered&#8221; into nicely styled output.</p>
+
+<hr />
+
+<h2 id="whyweuseit">Why We Use It</h2>
+
+<p>For AI-assisted work, Markdown has real advantages over a Word document:</p>
+
+<ul>
+<li><strong>It is future-proof.</strong> Plain text opens in anything, on any system, decades from now. It is never locked inside one company&#8217;s app or file format.</li>
+<li><strong>It is readable as-is.</strong> Even with no special software, the content is legible.</li>
+<li><strong>It works everywhere.</strong> Every editor, every AI tool, and every version-control platform (like GitHub) reads and writes it natively. AI tools in particular produce Markdown by default.</li>
+<li><strong>Changes are easy to track.</strong> Because it is plain text, you (or GitHub) can see exactly what changed between two versions — which matters for the decision and version discipline this framework encourages.</li>
+<li><strong>It separates content from styling.</strong> You focus on <em>what</em> you are writing; the rendering decides how it <em>looks</em>. The same file can become a web page, a PDF, or a printed document.</li>
+</ul>
+
+<p>The trade-off is that it is less familiar than Word and has fewer point-and-click formatting buttons. This guide closes that gap.</p>
+
+<hr />
+
+<h2 id="essentialformatting">Essential Formatting</h2>
+
+<h3 id="alwaysworksstandardmarkdown">Always works (standard Markdown)</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">To get…</th>
+	<th style="text-align:left;">Type this</th>
+	<th style="text-align:left;">Result</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><em>Italic</em></td>
+	<td style="text-align:left;"><code>*italic*</code> or <code>_italic_</code></td>
+	<td style="text-align:left;"><em>italic</em></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Bold</strong></td>
+	<td style="text-align:left;"><code>**bold**</code></td>
+	<td style="text-align:left;"><strong>bold</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong><em>Bold italic</em></strong></td>
+	<td style="text-align:left;"><code>***bold italic***</code></td>
+	<td style="text-align:left;"><strong><em>bold italic</em></strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Headings</td>
+	<td style="text-align:left;"><code># Heading 1</code>, <code>## Heading 2</code>, <code>### Heading 3</code> (down to <code>######</code>)</td>
+	<td style="text-align:left;">section headings, large to small</td>
+</tr>
+<tr>
+	<td style="text-align:left;">A line across the page</td>
+	<td style="text-align:left;"><code>---</code> on its own line</td>
+	<td style="text-align:left;">a horizontal rule</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Bulleted list</td>
+	<td style="text-align:left;"><code>- item</code> (one per line)</td>
+	<td style="text-align:left;">a bullet list</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Numbered list</td>
+	<td style="text-align:left;"><code>1. item</code> (one per line)</td>
+	<td style="text-align:left;">a numbered list</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Link</td>
+	<td style="text-align:left;"><code>[text to show](https://example.com)</code></td>
+	<td style="text-align:left;">a clickable link</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Image</td>
+	<td style="text-align:left;"><code>![description](path/to/image.png)</code></td>
+	<td style="text-align:left;">an embedded image</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Quote</td>
+	<td style="text-align:left;"><code>&gt; quoted text</code></td>
+	<td style="text-align:left;">an indented blockquote</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Inline code</td>
+	<td style="text-align:left;"><code>`code`</code></td>
+	<td style="text-align:left;"><code>code</code> in monospace</td>
+</tr>
+<tr>
+	<td style="text-align:left;">New paragraph</td>
+	<td style="text-align:left;">leave a blank line between blocks</td>
+	<td style="text-align:left;">a paragraph break</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="widelysupportedmostmoderntools">Widely supported (most modern tools)</h3>
+
+<p>These are &#8220;GitHub-Flavored Markdown&#8221; extensions — supported almost everywhere, but technically additions to the core.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">To get…</th>
+	<th style="text-align:left;">Type this</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Table</td>
+	<td style="text-align:left;"><code>\| Col A \| Col B \|</code> then a separator row <code>\|---\|---\|</code>, then your rows</td>
+</tr>
+<tr>
+	<td style="text-align:left;">~~Strikethrough~~</td>
+	<td style="text-align:left;"><code>~~strikethrough~~</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Checkbox / task list</td>
+	<td style="text-align:left;"><code>- [ ] to do</code> and <code>- [x] done</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="mayneedanadd-in%E2%80%94orusethehtmlfallback">May need an add-in — or use the HTML fallback</h3>
+
+<p>These are the ones you flagged. Support varies by tool (Pandoc and Obsidian handle them; many simpler editors do not). Where a tool does not support the Markdown form, a plain <strong>HTML tag works as a fallback in almost every renderer.</strong></p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">To get…</th>
+	<th style="text-align:left;">Markdown form (if supported)</th>
+	<th style="text-align:left;">Reliable HTML fallback</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Superscript (x²)</td>
+	<td style="text-align:left;"><code>x^2^</code></td>
+	<td style="text-align:left;"><code>x&lt;sup&gt;2&lt;/sup&gt;</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Subscript (H₂O)</td>
+	<td style="text-align:left;"><code>H~2~O</code></td>
+	<td style="text-align:left;"><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Footnote</td>
+	<td style="text-align:left;"><code>Some text.[^1]</code> … and later <code>[^1]: the note.</code></td>
+	<td style="text-align:left;">(no simple HTML equivalent — needs a tool that supports footnotes, e.g. Pandoc/Obsidian)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">==Highlight==</td>
+	<td style="text-align:left;"><code>==highlight==</code></td>
+	<td style="text-align:left;"><code>&lt;mark&gt;highlight&lt;/mark&gt;</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Underline</td>
+	<td style="text-align:left;">(no standard Markdown)</td>
+	<td style="text-align:left;"><code>&lt;u&gt;underline&lt;/u&gt;</code></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>[!NOTE]<br/>
+If a formatting feature you need is not rendering, two fixes usually work: (1) switch the tool&#8217;s setting or extension on, or (2) drop in the HTML tag shown above. HTML is valid inside Markdown.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="toolstowritemarkdown">Tools to Write Markdown</h2>
+
+<blockquote>
+<p>[!NOTE]<br/>
+The tools below are <strong>examples to show the range of choices — not recommendations or endorsements.</strong> Platforms and pricing change, so check current details before choosing. Each category has free and paid options; pick what fits your budget and comfort.</p>
+</blockquote>
+
+<p><strong>Free — already on your computer</strong></p>
+
+<ul>
+<li><strong>TextEdit</strong> (Mac) — set it to <em>Plain Text</em> mode (Format → Make Plain Text) and save as <code>.md</code>.</li>
+<li><strong>Notepad</strong> (Windows) — plain text by default; save with a <code>.md</code> extension.</li>
+<li>These work but show no live preview — you see the raw marks, not the rendered result.</li>
+</ul>
+
+<p><strong>Free — purpose-built (cross-platform: Mac and Windows)</strong></p>
+
+<ul>
+<li><strong>Visual Studio Code</strong> — free; has a built-in Markdown preview (open it side-by-side). Very widely used.</li>
+<li><strong>Obsidian</strong> — free for personal use; a Markdown-based notes/knowledge system (this is what the vault these documents live in uses).</li>
+<li>Open-source editors such as <strong>Zettlr</strong>, <strong>MarkText</strong>, <strong>Ghostwriter</strong>, <strong>Joplin</strong>, or <strong>Logseq</strong> — all free.</li>
+</ul>
+
+<p><strong>Paid — polished writing experiences</strong></p>
+
+<ul>
+<li><strong>Typora</strong> — Mac/Windows/Linux; a clean &#8220;what you see is what you get&#8221; editor; one-time purchase, free trial.</li>
+<li><strong>iA Writer</strong> — Mac/Windows; distraction-free; one-time purchase (per platform).</li>
+<li><strong>Ulysses</strong> — Mac/iOS; subscription.</li>
+</ul>
+
+<hr />
+
+<h2 id="toolstoviewpreviewmarkdown">Tools to View / Preview Markdown</h2>
+
+<p>Often you do not need a separate viewer — <strong>most of the editors above render a live preview themselves</strong> (VS Code, Obsidian, and Typora all show formatted output as you type).</p>
+
+<p>If you do want a dedicated viewer:</p>
+
+<ul>
+<li><strong>Marked 2</strong> (Mac) — a paid, one-time-purchase previewer that watches a file and shows it beautifully rendered; pairs with any plain editor.</li>
+<li><strong>Windows</strong> — there is no single famous equivalent, but options include VS Code&#8217;s or Obsidian&#8217;s preview, dedicated apps such as <strong>MarkdownPad</strong> (free and paid versions), or a browser extension (below).</li>
+<li><strong>Any web browser</strong> — add a free &#8220;Markdown Viewer&#8221; extension (available for Chrome, Edge, Firefox) and you can open <code>.md</code> files straight in the browser.</li>
+<li><strong>GitHub / GitLab</strong> — if your files live there, they render <code>.md</code> automatically in the browser, no software needed.</li>
+</ul>
+
+<hr />
+
+<h2 id="wherewordandpagesfitnotwell">Where Word and Pages Fit (Not Well)</h2>
+
+<p><strong>Microsoft Word and Apple Pages are not Markdown tools.</strong> They save their own formats (<code>.docx</code>, <code>.pages</code>) and do not write Markdown marks. You <em>can</em> work around this, but with caveats:</p>
+
+<ul>
+<li><strong>Export to plain text, then rename to <code>.md</code>:</strong> this only gives you the words. Word/Pages will not insert the <code>#</code>, <code>**</code>, or table syntax, so a bold heading just becomes ordinary text — you would have to add the Markdown marks by hand afterward. Fine for a quick capture; poor for a real document.</li>
+<li><strong>Proper conversion with a converter:</strong> a free, open-source tool called <strong>Pandoc</strong> converts <code>.docx</code> to <code>.md</code> (and back) while keeping the structure. It is a command-line tool, so slightly technical; there are also one-off online converters for occasional jobs.</li>
+</ul>
+
+<p><strong>Bottom line:</strong> if you only occasionally need to bring a Word document across, convert it with Pandoc. If you are creating these documents regularly, it is far easier to write directly in a free Markdown editor such as Visual Studio Code or Obsidian than to fight Word into shape.</p>
+
+<hr />
+
+<h2 id="thereassuringsummary">The Reassuring Summary</h2>
+
+<ul>
+<li>A <code>.md</code> file is just text — you cannot really &#8220;break&#8221; it.</li>
+<li>You already have a tool that opens it (TextEdit or Notepad).</li>
+<li>For a nicer experience, a free editor with live preview (VS Code or Obsidian) is the easiest upgrade.</li>
+<li>You only need to remember a handful of marks — bold, italic, headings, lists, links, tables — to do almost everything in this bundle.</li>
+</ul>
+
+<hr />
+
+<h2 id="versionhistory">Version History</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Version</th>
+	<th style="text-align:left;">Date</th>
+	<th style="text-align:left;">Author</th>
+	<th style="text-align:left;">Summary</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">0.1</td>
+	<td style="text-align:left;">2026&#8211;06&#8211;09</td>
+	<td style="text-align:left;">Claude Code</td>
+	<td style="text-align:left;">Initial draft</td>
+</tr>
+<tr>
+	<td style="text-align:left;">1.0</td>
+	<td style="text-align:left;">2026&#8211;06&#8211;13</td>
+	<td style="text-align:left;">Jason Masters</td>
+	<td style="text-align:left;">Initial Version (Approved)</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
