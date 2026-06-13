@@ -13,6 +13,15 @@ tags: [community-edition, ai-governance, getting-started]
 
 # AI-Assisted Work: Community Edition
 
+> [!NOTE]
+> **New here? A quick orientation before you start.**
+>
+> The core documents — including the **[How to Work with AI Without Losing Control](how-to-work-with-ai-without-losing-control.md)** starting guide — are written in **Markdown** (`.md`). When you click one on this page, GitHub displays it as a clean, formatted document — there is nothing to install to read it here.
+>
+> **Not comfortable with Markdown files yet? Two easy options:**
+> - Open the **[`pdf/`](pdf/)** folder for a plain PDF copy of every document — easy to read or print.
+> - Or spend a few minutes with **[Working with Markdown (.md) Files](working-with-markdown-files.md)** — a short, plain-language guide that makes Markdown click.
+
 ## What This Is
 
 This is a practical framework for anyone using AI tools to run projects, build products, or manage documentation in their business.
@@ -37,9 +46,6 @@ The framework does not require a technical background. It does not assume knowle
 Every document here is a **Markdown** (`.md`) file — plain text with a few simple formatting marks (you write `**bold**` and it shows as **bold**). We use it because it is future-proof, opens in almost any tool, works everywhere AI tools and version control do, and makes changes easy to track — none of which is true of a Word file locked in one app's format.
 
 If `.md` files are new to you — including how to open one and how to format text — start with **[Working with Markdown (.md) Files](working-with-markdown-files.md)**. It covers the essential formatting and the (mostly free) tools for both Mac and Windows.
-
-> [!TIP]
-> Prefer to read or print? A PDF copy of every document is in the [`pdf/`](pdf/) folder.
 
 ---
 
